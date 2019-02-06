@@ -22,4 +22,4 @@ git_prompt() {
 PS1='$PINK\w$(git_prompt)
 $GREEN$ $RESET'
 
-#PS2='$(git_prompt) $RESET'
+PS2='$(git_prompt) $RESET'

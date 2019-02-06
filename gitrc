@@ -25,18 +25,18 @@ shopt -s checkwinsize
 
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
-#shopt -s globstar
+shopt -s globstar
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-for file in $HOME/.shellrc/rc.d/*.bash; do
+for file in $HOME/.shell/rc.d/*.bash; do
 	source $file
 done
 
 # load all files from .shellrc/rc.d/aliases directory
-if [ -d $HOME/.shellrc/rc.d/aliases ]; then
-  for file in $HOME/.shellrc/rc.d/aliases/*.bash; do
+if [ -d $HOME/.shell/rc.d/aliases ]; then
+  for file in $HOME/.shell/rc.d/aliases/*.bash; do
     source $file
   done
 fi
@@ -53,15 +53,15 @@ if ! shopt -oq posix; then
 fi
 
 # load all files from .shell/login.d directory
-if [ -d $HOME/.shellrc/rc.d/completions ]; then
-  for file in $HOME/.shellrc/rc.d/completions/*.bash; do
+if [ -d $HOME/.shell/rc.d/completions ]; then
+  for file in $HOME/.shell/rc.d/completions/*.bash; do
     source $file
   done
 fi
 
 # load all files from .shell/login.d directory
-if [ -d $HOME/.shellrc/rc.d/functions ]; then
-  for file in $HOME/.shellrc/rc.d/functions/*.bash; do
+if [ -d $HOME/.shell/rc.d/functions ]; then
+  for file in $HOME/.shell/rc.d/functions/*.bash; do
     source $file
   done
 fi
